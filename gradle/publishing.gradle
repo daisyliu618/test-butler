@@ -58,7 +58,7 @@ plugins.withId("com.android.application") {
     androidComponents {
         onVariants(selector().withBuildType("release"), { variant ->
             project.tasks.register("findApk", FindApkTask.class) {
-                apkFolder.set(variant.artifacts.get(SingleArtifact.APK))
+                apkFolder.set(variant.artifacts.get(SingleArtifact.APK.INSTANCE))
                 builtArtifactsLoader.set(variant.artifacts.getBuiltArtifactsLoader())
                 outputApk.set(project.layout.buildDirectory.file("${project.name}-${variant.buildType}.apk"))
             }
