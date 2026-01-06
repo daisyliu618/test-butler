@@ -174,6 +174,7 @@ public class TestButler {
      *
      * @param enabled true if GSM should be enabled, false otherwise
      */
+    @SuppressLint("AppBundleLocaleChanges")
     @TargetApi(Build.VERSION_CODES.KITKAT)
     public static void setGsmState(boolean enabled) {
         verifyApiReady();
